@@ -12,10 +12,12 @@ submit.addEventListener('click', function addItem() {
   `<div class="item_container">
   <img src="${imgLink}">
   <div class='description'>
-    <h4  >${itemName}</h4>
+    <h4>${itemName}</h4>
     <p> ${itemDescription}</p>
-    <p> ${itemPrice} </p>
+    <p> ${itemPrice} руб. </p> 
   </div>
   </div>`)
   form.reset()
+  submit.disabled = true
 })
+
