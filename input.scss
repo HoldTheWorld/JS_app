@@ -1,0 +1,124 @@
+$primary-font: Helvetica, sans-serif;
+
+html {
+  font-size: 16px;
+  font-family: $primary-font;
+  background: #E5E5E5;
+}
+
+body {
+  top: 0;
+  left: 0;
+}
+
+h2 {
+  padding-left: 1rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.add_block {
+  form {
+    display: flex;
+    flex-direction: column; 
+  } 
+
+  width: 20vw;
+  min-height: 100vh;
+  max-height: 100vh;
+  padding: 1em;
+}
+
+.items_block {
+  width: 80vw;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1em;
+}
+
+label {
+  font-size: .8rem;
+}
+
+label:after {
+  color: red;
+  content: "*";
+}
+
+textarea {
+  resize: none;
+  border: 0px;
+  border-radius: .25em;
+  box-shadow: 0em .125em .3em rgba(0, 0, 0, 0.1);
+  height: 6.7em;
+  margin: .5em 0 .5em 0;
+  padding-left: .7em;
+  padding-top: .8em;
+}
+
+textarea::placeholder {
+  font-family: $primary-font;
+  font-size: .6rem;
+}
+
+input {
+  border: 0px;
+  border-radius: .25em;
+  box-shadow: 0em .125em .3em rgba(0, 0, 0, 0.1);
+  height: 2.2em;
+  margin: .5em 0 .5em 0;
+  padding-left: .7em;
+
+}
+
+input::placeholder {
+  font-family: $primary-font;
+  font-size: .6rem;
+}
+
+button {
+  border: 0px;
+  border-radius: .5em;
+  height: 2.2em;
+  color: rgb(255, 255, 255);
+  background-color: #7BAE73;
+  font-family: $primary-font;
+  margin-top: 1em;
+}
+
+button:hover {
+  border: 0px;
+  background-color: rgb(108, 108, 160);
+  background-color: #9ab696;
+}
+button:active{
+  transform: translateY(.1em);
+}
+
+img {
+  max-width: 100%;
+  top: 0;
+}
+
+.item_container {
+  background-color: white;
+  width: 20em;
+  height: 25em;
+  display: flex;
+  flex-direction: column;
+  margin: .5em;
+  box-shadow: 0px 1em 2em rgba(0, 0, 0, 0.04);
+  border-radius: .25em;
+
+} 
+
+.description {
+  padding: .6em;
+}
+
