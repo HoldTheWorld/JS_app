@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS APP</title>
+  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" language="javascript">
+    function checkForm() {
+      const form =  document.forms[0].elements
+      let cansubmit = false;
+        for (let i = 0; i < form.length; i++) {
+          if (form[i].id != "item_description" && form[i].id != "addbutton") {
+            if(form[i].checkValidity()) {
+              cansubmit = true
+            } else {
+              cansubmit = false
+            }
+          }
+        }
+        if (cansubmit) {
+          document.getElementsByTagName('button')[0].disabled = false
+        } else {
+          document.getElementsByTagName('button')[0].disabled = true
+        }
+    }
+  </script> 
+  </head>
+  <body>
+    <h2>Добавление товара </h2>
+    <div class="container">
+      <div class="add_block">
+        <form onKeyup="checkForm()">
+          <label class="item_name required">Наименование товара</label>
+            <input maxlength="25" id="item_name" placeholder='Введите наименование товара' required/>
+          <label class="item_description">Описание товара</label>
+            <textarea maxlength="100" id="item_description" placeholder="Введите описание товара" ></textarea>
+          <label class="img_link required">Ссылка на изображение товара</label>
+            <input id="img_link" placeholder="Введите ссылку" required/>
+          <label class="item_price required">Цена товара</label>
+            <input maxlength="25" type="number" id="item_price" placeholder="Введите цену (только цифры)" required/>
+          <button disabled="disabled" id="addbutton" type="button"> Добавить товар </button>
+        </form>
+      </div>
+      <div class="items_block">
+      </div>
+    </div>
+    <script src='script.js'></script>
+  </body>
+  </html>
