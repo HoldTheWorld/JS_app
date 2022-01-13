@@ -15,7 +15,7 @@ function onPageLoaded() {
 
     const deleteBtn = document.createElement("button")
     deleteBtn.classList.add("deletebutton")
-    deleteBtn.innerHTML = '<i class="far fa-trash-alt"></i>'
+    deleteBtn.innerHTML = '<i class="fa fa-trash">'
 
     const img = document.createElement("img")
     img.setAttribute("src", imgLink)
@@ -30,7 +30,7 @@ function onPageLoaded() {
     itemDescriptionP.append(itemDescription)
 
     const itemPriceP = document.createElement('p')
-    itemPriceP.append(itemPrice)
+    itemPriceP.append(`${itemPrice} руб.`)
 
     description.append(itemNameH,itemDescriptionP, itemPriceP)
 
@@ -42,18 +42,7 @@ function onPageLoaded() {
     form.reset()
     submit.disabled = true
    
-
     sessionStorage.setItem('items', container.innerHTML)
-
-    // container.insertAdjacentHTML("beforeend", 
-    //   `<div class="item_container">
-    //   <img src="${imgLink}">
-    //   <div class='description'>
-    //     <h4>${itemName}</h4>
-    //     <p> ${itemDescription}</p>
-    //     <p> ${itemPrice} руб. </p> 
-    //   </div>
-    //   </div>`)
 
   }
 
@@ -77,7 +66,6 @@ function loadTodos() {
 }
 
 loadTodos();
-
   submit.addEventListener('click', () => createItem())
 
 }

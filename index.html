@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JS APP</title>
   <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script type="text/javascript" language="javascript">
     function checkForm() {
       const form =  document.forms[0].elements
@@ -39,22 +40,11 @@
           <label class="img_link required">Ссылка на изображение товара</label>
             <input id="img_link" placeholder="Введите ссылку" required/>
           <label class="item_price required">Цена товара</label>
-            <input maxlength="25" type="number" id="item_price" placeholder="Введите цену" required/>
+            <input maxlength="25" type="number" id="item_price" placeholder="Введите цену (только цифры)" required/>
           <button disabled="disabled" id="addbutton" type="button"> Добавить товар </button>
         </form>
-        <i class="fas fa-user"></i>
       </div>
       <div class="items_block">
-
-        <!-- <div class="item_container">
-          <img src="http://risovach.ru/upload/2013/02/mem/kakoy-pacan_10675702_orig_.jpeg">
-          <div class='description'>
-            <h4>${itemName}</h4>
-            <div> ${itemDescription}</div>
-            <p> ${itemPrice} руб. </p> 
-          </div>
-          </div> -->
-
       </div>
     </div>
     <script src='script.js'></script>
