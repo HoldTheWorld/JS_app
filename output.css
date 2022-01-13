@@ -1,5 +1,4 @@
 html {
-  font-size: 16px;
   font-family: Helvetica, sans-serif;
   background: #E5E5E5;
 }
@@ -19,25 +18,27 @@ h2 {
 }
 
 .add_block {
+  font-size: 1em;
   width: 20vw;
   min-height: 100vh;
   max-height: 100vh;
-  padding: 1em;
+  padding: 1rem;
 }
 .add_block form {
   display: flex;
   flex-direction: column;
+  font-size: 1em;
 }
-.add_block label {
-  font-size: 0.8rem;
+.add_block form label {
+  font-size: 0.8em;
 }
-.add_block label.required::after {
+.add_block form label.required::after {
   color: red;
   content: "*";
 }
-.add_block textarea {
+.add_block form textarea {
   resize: none;
-  border: 0px;
+  border: none;
   border-radius: 0.25em;
   box-shadow: 0em 0.125em 0.3em rgba(0, 0, 0, 0.1);
   height: 6.7em;
@@ -45,32 +46,32 @@ h2 {
   padding-left: 0.7em;
   padding-top: 0.8em;
 }
-.add_block textarea::placeholder {
+.add_block form textarea::placeholder {
   font-family: Helvetica, sans-serif;
-  font-size: 0.6rem;
+  font-size: 0.6em;
 }
-.add_block textarea:focus {
+.add_block form textarea:focus {
   outline: none;
 }
-.add_block input {
-  border: 0px;
+.add_block form input {
+  border: none;
   border-radius: 0.25em;
   box-shadow: 0em 0.125em 0.3em rgba(0, 0, 0, 0.1);
   height: 2.2em;
   margin: 0.5em 0 0.5em 0;
   padding-left: 0.7em;
 }
-.add_block input:required:valid {
+.add_block form input:required:valid {
   border: 2px solid green;
 }
-.add_block input:focus {
+.add_block form input:focus {
   outline: none;
 }
-.add_block input::placeholder {
+.add_block form input::placeholder {
   font-family: Helvetica, sans-serif;
-  font-size: 0.6rem;
+  font-size: 0.6em;
 }
-.add_block button {
+.add_block form button {
   border: 0px;
   border-radius: 0.5em;
   height: 2.2em;
@@ -78,19 +79,20 @@ h2 {
   background-color: #7BAE73;
   font-family: Helvetica, sans-serif;
   margin-top: 1em;
+  font-size: 1em;
 }
-.add_block button:hover {
+.add_block form button:hover {
   border: 0px;
   background-color: #6c6ca0;
   background-color: #9ab696;
 }
-.add_block button:active {
+.add_block form button:active {
   transform: translateY(0.1em);
 }
-.add_block button:disabled {
+.add_block form button:disabled {
   background-color: #aaafa9;
 }
-.add_block button:disabled:hover {
+.add_block form button:disabled:hover {
   background-color: #aaafa9;
 }
 
@@ -101,17 +103,13 @@ h2 {
   flex-direction: row;
   flex-wrap: wrap;
   padding: 1em;
-}
-
-img {
-  max-width: 100%;
-  top: 0;
+  align-content: flex-start;
 }
 
 .item_container {
   background-color: white;
   width: 20em;
-  height: 25em;
+  height: 28em;
   display: flex;
   flex-direction: column;
   margin: 0.5em;
@@ -119,9 +117,32 @@ img {
   border-radius: 0.4em;
   overflow: hidden;
 }
+.item_container img {
+  max-width: 100%;
+  top: 0;
+}
 
 .description {
   padding: 0.6em;
+}
+
+@media (min-width: 768px) and (max-width: 1100px) {
+  html {
+    font-size: 12px;
+  }
+
+  .add_block {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 8px;
+  }
+
+  .add_block {
+    font-size: 8px;
+  }
 }
 
 /*# sourceMappingURL=output.css.map */
