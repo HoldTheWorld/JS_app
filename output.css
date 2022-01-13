@@ -83,7 +83,6 @@ h2 {
 }
 .add_block form button:hover {
   border: 0px;
-  background-color: #6c6ca0;
   background-color: #9ab696;
 }
 .add_block form button:active {
@@ -107,6 +106,7 @@ h2 {
 }
 
 .item_container {
+  position: relative;
   background-color: white;
   width: 20em;
   height: 28em;
@@ -115,11 +115,33 @@ h2 {
   margin: 0.5em;
   box-shadow: 0px 1em 2em rgba(0, 0, 0, 0.04);
   border-radius: 0.4em;
-  overflow: hidden;
+}
+.item_container .deletebutton {
+  position: absolute;
+  top: -1.5em;
+  right: -0.5em;
+  border: 0px;
+  border-radius: 0.5em;
+  height: 2em;
+  width: 2em;
+  color: white;
+  background-color: #ff8484;
+  font-family: Helvetica, sans-serif;
+  margin-top: 1em;
+  font-size: 1em;
+}
+.item_container .deletebutton:hover {
+  border: none;
+  background-color: #f5a8a8;
+}
+.item_container .deletebutton:active {
+  transform: translateY(0.1em);
 }
 .item_container img {
   max-width: 100%;
   top: 0;
+  border-top-left-radius: 0.4em;
+  border-top-right-radius: 0.4em;
 }
 
 .description {
